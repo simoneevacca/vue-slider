@@ -7,15 +7,32 @@ createApp(
             return {
                 imageCounter: 0,
                 images: [
-                    "img/01.webp",
-                    "img/02.webp",
-                    "img/03.webp",
-                    "img/04.webp",
-                    "img/05.webp",
+                    {
+                        img: "img/01.webp",
+                        title: "Spiderman"
+                    },
+                    {
+                        img: "img/02.webp",
+                        title: "Spiderman"
+                    },
+                    {
+                        img: "img/03.webp",
+                        title: "Spiderman"
+                    },
+                    {
+                        img: "img/04.webp",
+                        title: "Spiderman"
+                    },
+                    {
+                        img: "img/05.webp",
+                        title: "Spiderman"
+                    },
+                    
                 ],
 
             }
         },
+
 
         
         mounted() {
