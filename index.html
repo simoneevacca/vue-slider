@@ -33,7 +33,7 @@
                     <div @click="prevImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
                     <div class="thumb">
-                        <img v-for="image in images" :src="image.img" alt="Svezia" />
+                        <img v-for="(image, index) in images" :src="image.img" alt="" @click="imageCounter = index"/>
                     </div>
                    
                 </div>
