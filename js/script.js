@@ -34,16 +34,18 @@ createApp(
         },
 
         methods:{
+          
+
             prevImage() {
-                this.imageCounter--;
                 if (this.imageCounter == 0) {
-                    this.imageCounter === this.images.lenght
+                    this.imageCounter = this.images.length
                 }
+                this.imageCounter--;
             },
 
             nextImage() {
                 this.imageCounter++;
-                if (this.imageCounter == this.images.lenght) {
+                if (this.imageCounter == this.images.length) {
                     this.imageCounter = 0
                 }
             }
