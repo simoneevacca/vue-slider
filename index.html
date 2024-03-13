@@ -14,7 +14,7 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseenter="stopTimer" @mouseleave="startTimer">
 
                 <div class="item">
                     <img :src="images[imageCounter].img" alt="images[imageCounter].title" />
@@ -32,8 +32,8 @@
                 <div class="thumbs">
                     <div @click="prevImage" class="prev"></div>
                     <div @click="nextImage" class="next"></div>
-                    <div class="thumb">
-                        <img v-for="(image, index) in images" :src="image.img" alt="" @click="imageCounter = index"/>
+                    <div class="thumb"  :class="{'active': imageCounter === index}" v-for="(image, index) in images">
+                        <img  :src="image.img" alt="" @click="imageCounter = index"/>
                     </div>
                    
                 </div>

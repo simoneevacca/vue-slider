@@ -5,6 +5,7 @@ createApp({
 
     data() {
         return {
+            timer: null,
             imageCounter: 0,
             images: [
                 {
@@ -50,10 +51,23 @@ createApp({
             }
         },
 
+        startTimer(){
+            this.timer = setInterval(() => {
+                this.nextImage();
+            }, 3000)
+        },
+
+        stopTimer(){
+            clearInterval(this.timer)
+        }
 
     },
+
+    mounted() {
+
+        this.startTimer() 
+    }
 
 
 
 }).mount('#app')
-
